@@ -216,6 +216,7 @@ ngx_process_events_and_timers(ngx_cycle_t *cycle)
 #endif
     }
 
+    // 是否使用锁来解决惊群效应
     if (ngx_use_accept_mutex) {
         if (ngx_accept_disabled > 0) {
             ngx_accept_disabled--;
